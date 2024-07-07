@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Level To-Do App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Next Level To-Do App</h1>
+        <div class="add-task">
+            <label for="taskName">Task Name:</label>
+            <input type="text" id="taskName" placeholder="Enter task name">
+
+            <label for="taskDescription">Task Description:</label>
+            <textarea id="taskDescription" placeholder="Enter task description"></textarea>
+
+            <label for="taskPriority">Priority:</label>
+            <select id="taskPriority" aria-label="Task Priority">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+
+            <label for="taskDueDate">Due Date:</label>
+            <input type="date" id="taskDueDate">
+
+            <button id="addTask">Add Task</button>
+        </div>
+        <div class="task-controls">
+            <div class="filters">
+                <button id="filterAll" class="active">All</button>
+                <button id="filterActive">Active</button>
+                <button id="filterCompleted">Completed</button>
+            </div>
+            <div class="sort">
+                <label for="sortBy">Sort by:</label>
+                <select id="sortBy" aria-label="Sort Tasks">
+                    <option value="priority">Priority</option>
+                    <option value="dueDate">Due Date</option>
+                </select>
+            </div>
+        </div>
+        <ul id="taskList"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
